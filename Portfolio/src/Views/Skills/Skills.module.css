@@ -4,6 +4,8 @@
     padding: 30px 50px;
     background-color: var(--light-orange);
     font-family: 'Public Sans', sans-serif;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .skills_title{
@@ -16,9 +18,14 @@
 }
 
 .skills_container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 40px;
+    justify-items: stretch;
+    align-content: space-around;
+    flex-basis: 100%;
     margin-top: 30px;
     column-gap: 47px;
-    row-gap: 30px;
-    flex-wrap: wrap;
+
 }

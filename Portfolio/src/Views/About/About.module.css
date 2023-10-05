@@ -1,0 +1,27 @@
+.about{
+    height: 100vh;
+    background-color: var(--light-orange);
+    padding: 30px 50px;
+    font-family: 'Public Sans', sans-serif;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.about_text{
+    background-color: white;
+    border: 2px solid black;
+}
+
+.about_text_title{
+    border-bottom: 2px solid black;
+    font-size: 3.2rem;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+.about_text_description{
+    padding: 40px 30px;
+    font-size: 2.3rem;
+    text-align: left;
+    font-weight: 500;
+}
