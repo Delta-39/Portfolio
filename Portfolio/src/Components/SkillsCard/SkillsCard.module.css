@@ -1,0 +1,23 @@
+.card{
+    width: 243px;
+    height: 278px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 45px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 5px 0px 0px rgba(0,0,0,0.75);
+    transition: .3s ease-in-out;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card:hover{
+    transform: translate(0,-6px);
+}
