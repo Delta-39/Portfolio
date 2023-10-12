@@ -1,15 +1,19 @@
 .about{
     height: 100vh;
     background-color: var(--light-orange);
-    padding: 30px 50px;
+    padding: 30px;
     font-family: 'Public Sans', sans-serif;
     border-left: 1px solid black;
     border-right: 1px solid black;
+    display: flex;
+    justify-content: space-between;
 }
 
 .about_text{
+    width: 50%;
     background-color: white;
     border: 2px solid black;
+    margin: 0 40px;
 }
 
 .about_text_title{
@@ -20,8 +24,13 @@
 }
 
 .about_text_description{
-    padding: 40px 30px;
-    font-size: 2.3rem;
+    padding: 20px 30px;
+    font-size: 2rem;
     text-align: left;
     font-weight: 500;
+}
+
+.about_images{
+    width:50%;
+    border: 1px solid black ;
 }
