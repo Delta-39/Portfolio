@@ -12,6 +12,7 @@ const ProjectSlider = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptativeHeight:true,
   };
 
   return (
@@ -20,11 +21,16 @@ const ProjectSlider = () => {
             <div className={styles.imageContainer} >
                 <img src={image} alt="" />
                 <div className={styles.title} >
-                    <h2>RodarRent</h2>
+                  <h2>RodarRent</h2>
+                  <p>Fullstack Rental app</p>
                 </div>
             </div>
             <div className={styles.imageContainer} >
                 <img src={image2} alt="" />
+                <div className={styles.title} >
+                  <h2>Countries App</h2>
+                  <p>Fullstack App about Countries</p>
+                </div>
             </div>
       </Slider>
     </div>

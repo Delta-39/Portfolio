@@ -4,12 +4,22 @@
     background-color: var(--light-orange);
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 40px;
+    font-family: 'Public Sans',sans-serif;
 }
 
 .projectSlider{
-    width: 80%;
+    width: 75%;
     justify-self: center;
     align-self: center;
-    border: 2px solid black;
+}
+
+.projectTitle{
+    border-bottom: 2px solid black;
+    font-size: 2.5rem;
+}
+
+.projectTitle h2{
+    font-weight: 900;
 }
