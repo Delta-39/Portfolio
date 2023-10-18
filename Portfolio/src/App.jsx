@@ -1,19 +1,14 @@
-import About from './Views/About/About'
-import Contact from './Views/Contact/Contact'
-import Home from './Views/Home/Home'
-import Projects from './Views/Projects/Projects'
-import Skills from './Views/Skills/Skills'
+import { Routes, Route } from "react-router-dom"
+import Container from "./Components/Container/Container"
+import ProjectDetail from "./Views/ProjectDetail/ProjectDetail"
 
 function App() {
 
   return (
-    <div>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-    </div>
+    <Routes>
+      <Route path="/" exact element={<Container />} />
+      <Route path="/:id" exact element={<ProjectDetail />} />
+    </Routes>
   )
 }
 
