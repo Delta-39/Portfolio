@@ -1,32 +1,33 @@
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: var(--light-orange);
-    font-family: "Public Sans", sans-serif;
-    padding: 40px;
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--light-orange);
+  font-family: "Public Sans", sans-serif;
+  padding: 40px;
 }
 
-.contactTitle{
-    border-bottom: 2px solid black;
-    font-size: 3rem;
-    font-weight: 900;
+.contactTitle {
+  border-bottom: 2px solid black;
+  font-size: 3rem;
+  font-weight: 900;
 }
 
-.contactContainer{
-    width: 100%;
-    display: flex;
-    margin-top: 30px;
+.contactContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
-.contactForm{
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid black;
-    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.832);
+.contactForm {
+  width: 45%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.832);
 }
 
-/* Contact.module.css */
 .inputField {
   position: relative;
   margin-bottom: 20px;
@@ -36,22 +37,103 @@
   position: absolute;
   pointer-events: none;
   left: 10px;
-  top: 50%; /* Alinea la etiqueta verticalmente al centro */
-  transform: translateY(-50%); /* Alinea la etiqueta verticalmente al centro */
+  top: 50%;
+  transform: translateY(-50%);
   transition: 0.2s ease all;
   color: #000;
 }
 
 .inputField input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 15px;
+  border: 0;
   border-radius: 5px;
+  background-color: white;
+  transition: border 0.2s ease;
 }
 
-.inputField input:focus + label{
+.inputField input:focus+label,
+.inputField input:valid+label{
   top: -2px;
   left: 10px;
-  font-size: 20px;
-  color: #4285f4;
+  font-size: 1rem;
+  padding: 5px;
+  background-color: white;
+}
+
+.inputField input:not(:focus){
+  border: 2px solid black;
+}
+
+.inputField input:focus {
+  border: 2px solid orange; 
+}
+
+.textareaContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.textareaContainer label{
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.textareaContainer textarea{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  resize: none;
+  font-family: "Public Sans", sans-serif;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.contactForm button{
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid black;
+  font-weight: 700;
+  box-shadow: 6px 4px 0px 0px rgba(0, 0, 0, 0.918);
+  transition: .3s ease-in-out;
+}
+
+.contactForm button:hover{
+  transform: translate(6px,4px);
+  box-shadow: none;
+}
+
+.contactForm button:active{
+  background-color: orange;
+}
+
+.container_socialNetwork{
+  width: 50%;
+  align-self: flex-end;
+
+}
+
+.contactContainer h3{
+  font-size: 2rem;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  text-align: right;
+}
+
+.socialNetwork{
+  margin-top: 10px;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.5rem;
+}
+
+.socialNetwork a{
+  color: rgba(0, 0, 0, 0.938);
+  transition: .3s ease-in-out;
+}
+
+.socialNetwork a:hover{
+  transform: scale(1.2);
+  color: orange;
 }
