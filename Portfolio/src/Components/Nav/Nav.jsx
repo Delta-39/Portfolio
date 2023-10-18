@@ -3,7 +3,6 @@ import styles from './Nav.module.css'
 
 const Nav = () => {
 
-
     return (
         <header className={styles.header} >
             <div className={styles.title} >

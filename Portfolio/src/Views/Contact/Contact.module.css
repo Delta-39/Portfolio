@@ -1,0 +1,57 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-orange);
+    font-family: "Public Sans", sans-serif;
+    padding: 40px;
+}
+
+.contactTitle{
+    border-bottom: 2px solid black;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.contactContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+}
+
+.contactForm{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.832);
+}
+
+/* Contact.module.css */
+.inputField {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputField label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 50%; /* Alinea la etiqueta verticalmente al centro */
+  transform: translateY(-50%); /* Alinea la etiqueta verticalmente al centro */
+  transition: 0.2s ease all;
+  color: #000;
+}
+
+.inputField input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputField input:focus + label{
+  top: -2px;
+  left: 10px;
+  font-size: 20px;
+  color: #4285f4;
+}
