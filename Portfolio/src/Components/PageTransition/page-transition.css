@@ -6,4 +6,5 @@
     height: 100vh;
     background-color: orange;
     transform-origin: bottom;
+    z-index: 10;
 }

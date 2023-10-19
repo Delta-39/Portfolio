@@ -1,0 +1,39 @@
+.stackContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  box-shadow: 6px 5px 0px 0px rgba(0, 0, 0, 0.858);
+  cursor: pointer;
+}
+
+.selected {
+  background-color: orange;
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  z-index: 1;
+}
