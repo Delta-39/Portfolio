@@ -3,6 +3,7 @@ import Container from "./Components/Container/Container"
 import ProjectDetail from "./Views/ProjectDetail/ProjectDetail"
 import { AnimatePresence } from "framer-motion"
 
+
 function App() {
 
   return (

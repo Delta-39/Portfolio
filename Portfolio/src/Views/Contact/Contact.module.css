@@ -33,11 +33,22 @@
   margin-bottom: 20px;
 }
 
+.errorContainer{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: red;
+}
+
+.errorContainer p{
+  margin-left: 5px;
+}
+
 .inputField label {
   position: absolute;
   pointer-events: none;
   left: 10px;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   transition: 0.2s ease all;
   color: #000;
@@ -87,6 +98,7 @@
 .textareaContainer{
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .textareaContainer label{
@@ -96,7 +108,6 @@
 
 .textareaContainer textarea{
   margin-top: 10px;
-  margin-bottom: 10px;
   resize: none;
   font-family: "Public Sans", sans-serif;
   padding: 10px;
@@ -105,6 +116,7 @@
 }
 
 .contactForm button{
+  margin-top: 10px;
   padding: 5px 10px;
   font-size: 1rem;
   cursor: pointer;

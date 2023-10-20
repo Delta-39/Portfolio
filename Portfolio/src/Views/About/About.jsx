@@ -1,10 +1,12 @@
 import styles from './About.module.css'
+import aboutHeroImage from '../../assets/linkedinPorfile.webp'
+
 
 const About = () => {
     return (
         <div className={styles.about} id="about" >
-            <div className={styles.about_images}>
-
+            <div data-aos="fade-left" data-aos-duration={1000} className={styles.about_image}>
+                <img data-aos="zoom-in" data-aos-duration={1200} data-aos-delay={500} src={aboutHeroImage} alt="about-hero-image" />
             </div>
             <div className={styles.about_text}>
                 <div className={styles.about_text_title}>

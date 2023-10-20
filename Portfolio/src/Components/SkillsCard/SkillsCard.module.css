@@ -1,4 +1,4 @@
-.card{
+.card {
     width: 100%;
     height: 100%;
     flex-grow: 1;
@@ -9,18 +9,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 6px 5px 0px 0px rgba(0,0,0,0.75);
-    transition: .3s ease-in-out;
+    box-shadow: 6px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    position: relative;
 }
 
-
-.imgSize img{
+.card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.card:hover{
-    transform: translate(0,-6px);
+.cardTitle {
+    position: absolute;
+    bottom: -40px;
+    /* Ajusta esta posición según tus necesidades */
+    z-index: -1;
+    /* Asegura que esté detrás de la tarjeta */
+    transition: bottom 0.3s ease-in-out;
+    /* Aplica la transición a la posición */
+    width: 100%;
+    /* Ocupa todo el ancho de la tarjeta */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover .cardTitle {
+    bottom: -30px; /* Muestra el título suavemente */
 }

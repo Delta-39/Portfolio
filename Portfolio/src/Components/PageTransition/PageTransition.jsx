@@ -15,7 +15,7 @@ const PageTransition = ({ children }) => {
     handleBodyOverflow("hidden");
 
     // Después de la transición (ajusta el tiempo para que coincida con la duración de la animación)
-    const transitionDuration = 1200; // Duración de la animación en milisegundos
+    const transitionDuration = 1200; 
     const timeout = setTimeout(() => {
       handleBodyOverflow("auto");
     }, transitionDuration);
