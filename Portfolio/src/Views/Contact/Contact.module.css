@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--light-orange);
   font-family: "Public Sans", sans-serif;
   padding: 40px;
@@ -164,6 +164,7 @@
   border-bottom: 2px solid black;
   padding-bottom: 5px;
   text-align: right;
+  overflow-x: hidden;
 }
 
 .socialNetwork{

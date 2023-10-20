@@ -19,11 +19,11 @@ const Skills = () =>{
     return(
         <div className={styles.skills} id="skills" >
             <div className={styles.skills_title}>
-                <h2>Skills & Tools so far...</h2>
+                <h2 data-aos="fade-up" data-aos-duration={1000} >Skills & Tools so far...</h2>
             </div>
             <div className={styles.skills_container} >
                 {skills.map((skill, index)=>(
-                    <SkillsCard key={index} skillImage={skill.src} title={skill.title} name={skill.name} />
+                    <SkillsCard index={index} key={index} skillImage={skill.src} title={skill.title} name={skill.name} />
                 ))}
             </div>
         </div>

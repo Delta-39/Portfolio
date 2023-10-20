@@ -16,7 +16,7 @@ const ProjectSlider = () => {
   };
 
   return (
-    <div className={styles.carouselContainer} >
+    <div data-aos="zoom-in-up" data-aos-duration={2000} data-aos-delay={400} className={styles.carouselContainer} >
       <Slider {...settings}>
         {projectData.map((project,index)=>(
           <div key={index} className={styles.imageContainer} >

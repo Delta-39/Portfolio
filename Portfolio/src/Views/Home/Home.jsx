@@ -12,9 +12,9 @@ const Home = () => {
                         <h1>I’m a fullstack web developer</h1>
                         <h3>I create websites carefully, focusing on both functionality and aesthetics.</h3>
                     </div>
-                    <div className={styles.container_left_buttons}>
-                        <button data-aos="fade-up" data-aos-duration={1000} data-aos-delay={1000} >Resume</button>
-                        <button data-aos="fade-up" data-aos-duration={1000} data-aos-delay={1300} ><a href="https://www.linkedin.com/in/juan-martin-terribile-giles-90a4b1229/">Connect with Me</a></button>
+                    <div data-aos="fade-up" data-aos-duration={1000} data-aos-delay={1300} data-aos-offset={-100} className={styles.container_left_buttons}>
+                        <button >Resume</button>
+                        <button ><a href="https://www.linkedin.com/in/juan-martin-terribile-giles-90a4b1229/">Connect with Me</a></button>
                     </div>
                 </div>
                 <div className={styles.container_right}>

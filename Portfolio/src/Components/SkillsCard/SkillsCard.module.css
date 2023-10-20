@@ -26,8 +26,9 @@
     bottom: -40px;
     /* Ajusta esta posición según tus necesidades */
     z-index: -1;
+    display: none;
     /* Asegura que esté detrás de la tarjeta */
-    transition: bottom 0.3s ease-in-out;
+    transition: .3s ease-in-out;
     /* Aplica la transición a la posición */
     width: 100%;
     /* Ocupa todo el ancho de la tarjeta */
@@ -40,5 +41,6 @@
 }
 
 .card:hover .cardTitle {
+    display: block;
     bottom: -30px; /* Muestra el título suavemente */
 }

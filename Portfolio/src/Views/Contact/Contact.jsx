@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <div className={styles.container} id="contact">
-      <h2 className={styles.contactTitle}>Contact</h2>
+      <h2 data-aos="fade-up" className={styles.contactTitle}>Contact</h2>
       <div className={styles.contactContainer}>
         <div className={styles.contactForm}>
           <form action="">
@@ -103,18 +103,18 @@ const Contact = () => {
           </form>
         </div>
         <div className={styles.container_socialNetwork}>
-          <div className={styles.heroImage} >
-            <img src={astronaut} alt="astronaut-hero" />
+          <div data-aos="fade-down" data-aos-duration={1500} className={styles.heroImage} >
+            <img data-aos="zoom-in" data-aos-duration={2000} data-aos-delay={1000} src={astronaut} alt="astronaut-hero" />
           </div>
-          <h3>My social networks</h3>
-          <div className={styles.socialNetwork}>
+          <h3 data-aos="fade-right" data-aos-duration={1500} >My social networks</h3>
+          <div data-aos="fade-left" data-aos-duration={2000} data-aos-delay={700} data-aos-offset={-400} className={styles.socialNetwork}>
             <a href="https://github.com/Delta-39">
               <FaGithub />
             </a>
             <a href="https://www.linkedin.com/in/juan-martin-terribile-giles-90a4b1229/">
               <FaLinkedin />
             </a>
-            <a href="https://www.instagram.com/jmterribile/">
+            <a  href="https://www.instagram.com/jmterribile/">
               <FaInstagram />
             </a>
           </div>
