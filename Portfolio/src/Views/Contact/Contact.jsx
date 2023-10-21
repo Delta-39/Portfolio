@@ -21,23 +21,24 @@ const Contact = () => {
     stack: ""
   });
 
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setData({ ...data, [name]: value });
+    setData({ ...data, [name]: value })
+    setErrors(validate({ ...data, [name]: value }))
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    validate(data, setErrors);
   };
-
-  const [selectedOption, setSelectedOption] = useState(null);
 
   return (
     <div className={styles.container} id="contact">
-      <h2 data-aos="fade-up" className={styles.contactTitle}>Contact</h2>
+      <h2 data-aos="fade-up" data-aos-duration={2000} className={styles.contactTitle}>Contact</h2>
       <div className={styles.contactContainer}>
-        <div className={styles.contactForm}>
+        <div data-aos="fade-left" data-aos-duration={2000} className={styles.contactForm}>
           <form action="">
             <div className={styles.inputField}>
               <input
@@ -114,7 +115,7 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/juan-martin-terribile-giles-90a4b1229/">
               <FaLinkedin />
             </a>
-            <a  href="https://www.instagram.com/jmterribile/">
+            <a href="https://www.instagram.com/jmterribile/">
               <FaInstagram />
             </a>
           </div>

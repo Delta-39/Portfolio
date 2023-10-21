@@ -3,17 +3,14 @@ export const validate = ({
     email,
     message,
     stack
-}, setErrors) => {
+}) => {
 
-    let errors = {}
+    const errors = {}
 
-    const regexName = /^[A-Za-z\s]+/;
-    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!name) {
         errors.name = "This field must be completed"
-    } else if (!regexName.test(email)) {
-        errors.name = "Please add only letters and spaces"
     }
 
     if (!email) {
@@ -24,11 +21,9 @@ export const validate = ({
 
     if (!message) {
         errors.message = "This Field must be completed"
-    } else if (!regexName.test(message)) {
-        errors.message = "Please add only letters and spaces"
     }
 
     if (!stack) errors.stack = "Please select one stack"
 
-    setErrors(errors)
+    return errors
 }

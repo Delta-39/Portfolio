@@ -18,5 +18,12 @@
     cursor: pointer;
     color: white;
     opacity: 0.9;
+    box-shadow: 4px 3px 0px 0px rgba(0, 0, 0, 0.952);
+    transition: .3s ease-in-out;
+}
+
+.homeButton:hover{
+    box-shadow: none;
+    transform: translate(4px,3px);
 }
 
