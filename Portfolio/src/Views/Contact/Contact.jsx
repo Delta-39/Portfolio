@@ -1,5 +1,5 @@
 import styles from "./Contact.module.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiInfoCircle } from "react-icons/bi";
 import astronaut from "../../assets/astronaut.png"
@@ -7,6 +7,8 @@ import { validate } from "./Validate";
 import StackOption from "../../Components/StackOption/StackOption";
 import axios from 'axios';
 import { API_URL } from "../../utils/routes";
+import {ToastContainer,toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -31,6 +33,7 @@ const Contact = () => {
     setErrors(validate({ ...data, [name]: value }))
   };
 
+  const formRef = useRef()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +44,16 @@ const Contact = () => {
   const sendEmail = async () =>{
     try {
       const response = await axios.post(`${API_URL}/contact`,data)
-      alert(response)
+      formRef.current.reset()
+      setData({
+        name: "",
+        email: "",
+        message: "",
+        stack: ""
+      })
+      setSelectedOption(null)
+
+      toast.success(response.data)
     } catch (error) {
       console.log(error)
     }
@@ -52,7 +64,7 @@ const Contact = () => {
       <h2 data-aos="fade-up" data-aos-duration={2000} className={styles.contactTitle}>Contact</h2>
       <div className={styles.contactContainer}>
         <div data-aos="fade-left" data-aos-duration={2000} className={styles.contactForm}>
-          <form action="">
+          <form ref={formRef} action="">
             <div className={styles.inputField}>
               <input
                 onChange={handleChange}
@@ -134,6 +146,18 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 };
