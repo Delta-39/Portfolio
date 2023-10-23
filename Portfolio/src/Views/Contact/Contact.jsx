@@ -5,6 +5,8 @@ import { BiInfoCircle } from "react-icons/bi";
 import astronaut from "../../assets/astronaut.png"
 import { validate } from "./Validate";
 import StackOption from "../../Components/StackOption/StackOption";
+import axios from 'axios';
+import { API_URL } from "../../utils/routes";
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -32,7 +34,18 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setErrors(validate(data))
+    sendEmail()
   };
+
+  const sendEmail = async () =>{
+    try {
+      const response = await axios.post(`${API_URL}/contact`,data)
+      alert(response)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <div className={styles.container} id="contact">
