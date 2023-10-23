@@ -20,11 +20,11 @@ function Container() {
       <Home />
       <About />
       {isNotHome && (
-        <div className={styles.homeButton}>
-          <Link to="home" smooth={true} duration={1000}>
-            <BiSolidHome />
-          </Link>
-        </div>
+        <Link to="home" smooth={true} duration={1000}>
+          <div className={styles.homeButton}>
+              <BiSolidHome />
+          </div>
+        </Link>
       )}
       <Skills />
       <Projects />
