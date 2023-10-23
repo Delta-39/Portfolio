@@ -82,3 +82,22 @@
     padding: 60px 80px;
     border-radius: 50%;
 }
+
+@media (max-width: 576px){
+    .container_right{
+        display: none;
+        width: 0%;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .container_left{
+        width: 100%;
+    }
+
+    .container_left_intro h1{
+        font-size: 3.2rem;
+        text-align: left;
+    }
+}
