@@ -8,28 +8,18 @@ const Home = () => {
     const handleClick = async () => {
         try {
             const response = await axios.get(`${API_URL}/pdf`, {
-                responseType: 'blob', // Especifica que esperas una respuesta binaria (el archivo PDF)
+                responseType: 'blob',
             });
-
             const pdfBlob = response.data;
-
-            // Crea un objeto URL a partir del blob para descargar el archivo
             const url = window.URL.createObjectURL(pdfBlob);
-
-            // Crea un enlace en el DOM para descargar el archivo
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = 'Martin Terribile.pdf'; // Nombre del archivo para la descarga
+            a.download = 'Martin Terribile.pdf';
             document.body.appendChild(a);
-
-            // Simula un clic en el enlace para iniciar la descarga
             a.click();
-
-            // Libera el objeto URL después de la descarga
             window.URL.revokeObjectURL(url);
             toast.success('Thank you for downloading my resume!')
-
         } catch (error) {
             console.log(error)
         }
