@@ -37,3 +37,11 @@
 .label {
   z-index: 1;
 }
+
+@media (max-width: 576px){
+  .square{
+    width: 90px;
+    height: 90px;
+    font-size: 1rem;
+  }
+}

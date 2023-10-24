@@ -17,8 +17,6 @@ function Container() {
   return (
     <div className={styles.container}>
       <Nav />
-      <Home />
-      <About />
       {isNotHome && (
         <Link to="home" smooth={true} duration={1000}>
           <div className={styles.homeButton}>
@@ -26,6 +24,8 @@ function Container() {
           </div>
         </Link>
       )}
+      <Home />
+      <About />
       <Skills />
       <Projects />
       <Contact />

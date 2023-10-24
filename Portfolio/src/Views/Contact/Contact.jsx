@@ -132,7 +132,7 @@ const Contact = () => {
           <div data-aos="fade-down" data-aos-duration={1500} className={styles.heroImage} >
             <img data-aos="zoom-in" data-aos-duration={2000} data-aos-delay={1000} src={astronaut} alt="astronaut-hero" />
           </div>
-          <h3 data-aos="fade-right" data-aos-duration={1500} >My social networks</h3>
+          <h3 data-aos="fade-right" data-aos-duration={1500}>My social networks</h3>
           <div data-aos="fade-left" data-aos-duration={2000} data-aos-delay={700} data-aos-offset={-400} className={styles.socialNetwork}>
             <a href="https://github.com/Delta-39">
               <FaGithub />

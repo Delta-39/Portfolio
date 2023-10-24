@@ -1,5 +1,6 @@
 .container{
     position: relative;
+    overflow-x: hidden;
 }
 
 .homeButton{
@@ -26,4 +27,3 @@
     box-shadow: none;
     transform: translate(4px,3px);
 }
-
