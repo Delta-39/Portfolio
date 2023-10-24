@@ -29,7 +29,10 @@
 
 .desktopNav{
     width: 100%;
+}
 
+.mobileNav{
+    display: none;
 }
 
 .realNav{
@@ -59,4 +62,59 @@
 
 .navLink:hover::after{
     width: 100%;
+}
+
+@media (max-width: 576px){
+
+    .header{
+        /* overflow-x: hidden; */
+    }
+
+    .title{
+        font-size: 0.9rem;
+        margin-left: 30px;
+    }
+
+    .desktopNav{
+        display: none;
+    }
+
+    .hamburguer{
+        cursor: pointer;
+        font-size: 3rem;
+    }
+
+    .mobileNav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .realNavMobile{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        font-family: 'Public Sans', sans-serif;
+        z-index: 1;
+        font-size: 0.9rem;
+        bottom: -227px;
+        justify-content: space-between;
+        height: 200px;
+        background-color: white;
+        padding: 10px 43px;
+        border: 1px solid black;
+        border-top: none;
+        transform: translateX(150px);
+        transition: .5s ease-in-out;
+        width: 0px;
+    }
+
+    .realNavMobile.showMenu{
+        transform: translateX(0);
+        width: 100%;
+    }
+
 }

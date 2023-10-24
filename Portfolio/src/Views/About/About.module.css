@@ -46,3 +46,31 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 576px){
+    .about{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_image{
+        height: 40%;
+        width: 100%;
+        padding: 40px;
+    }
+
+    .about_text{
+        height: 55%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .about_text_title{
+        font-size: 1.9rem;
+    }
+
+    .about_text_description{
+        font-size: 1rem;
+        padding: 10px 20px ;
+    }
+}
