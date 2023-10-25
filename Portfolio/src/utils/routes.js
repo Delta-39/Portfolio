@@ -1,1 +1,1 @@
-export const API_URL = 'https://portfolio-backend-api-m4tf.onrender.com'
+export const API_URL = 'https://portfolio-backend-egep.onrender.com'
