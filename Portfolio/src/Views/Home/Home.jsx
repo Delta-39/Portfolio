@@ -22,6 +22,7 @@ const Home = () => {
             toast.success('Thank you for downloading my resume!')
         } catch (error) {
             console.log(error)
+            toast.error("An error ocurred while retrievieng the resume")
         }
     }
 
