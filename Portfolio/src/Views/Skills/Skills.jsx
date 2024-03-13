@@ -13,7 +13,7 @@ const Skills = () =>{
         {src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg",name:"postgressSql-icon", title:"PostgreSQL" },
         {src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",name:"git-icon", title:"Git" },
         {src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",name:"github-icon", title:"Github" },
-        {src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",name:"figma-icon",title:"Figma"}
+        {src:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",name:"figma-icon",title:"AWS"},
     ]
 
     return(
